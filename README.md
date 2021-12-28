@@ -1,3 +1,6 @@
+# Project Details
+[project_report.pdf](project_report.pdf)
+
 # POST IoT Device 
 
 Follow the README instruction on `facial_recognition` directory 
