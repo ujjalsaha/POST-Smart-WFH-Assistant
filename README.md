@@ -1,4 +1,4 @@
-# Project Details
+# Project Details, Setup and Installation
 [project_report.pdf](project_report.pdf)
 
 # POST IoT Device 
