@@ -1,0 +1,67 @@
+.container{
+    display: flex;
+}
+h1 {
+    text-align: center;
+}
+body {
+    background-color: #F1F3F3
+}
+.axis {
+    font: 8px sans-serif;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #D4D8DA;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+.toolTip {
+    border-radius: 5px;
+    position: absolute;
+    display: none;
+    width: 110px;
+    height: 35px;
+    font: 10px sans-serif;
+    background: none repeat scroll 0 0 peachpuff;
+    padding: 6px;
+    text-align: right;
+}
+.daily_annotation_box{
+    fill: darkgrey;
+    fill-opacity: 0.4;
+}
+.weekend_annotation_box{
+    fill: peachpuff;
+    fill-opacity: 0.4;
+}
+
+.weekly_annotation_box{
+    fill: Khaki;
+    fill-opacity: 0.4;
+}
+.vdweekSelection {
+    width: 120px;
+    top:40px;
+    left:25px;
+}
+.pcweekSelection {
+    width: 120px;
+    top:40px;
+    left:25px;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    border-top: 5px solid #969696;
+    background-color: #EEECEC;
+    width: 1200px;
+    height: 50px;
+    line-height: 30px;
+    padding: 5px 40px;
+    font-size: 20px;
+    color: dimgrey;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

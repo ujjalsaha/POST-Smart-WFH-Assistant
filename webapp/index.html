@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- HTML FILE - Web APP -->
+
+<html lang="" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="scripts/voice.js"></script>
+    <script src="scripts/posture.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>POST (Personal Office Space Tracker)</title>
+  </head>
+
+<body onload="load_vd_weeks();load_pc_weeks();">
+
+    <h1 style="font-family: 'Arial Black';color: dimgray;text-align:left;padding-left: 40px">POST</h1>
+
+    <!--<div width="1000" height="500" style="background-color:cadetblue" class="container"> -->
+    <div class="title">
+        <!--<span style="color:Green;font-size: xx-large">&bull;</span>-->
+        <span>Ashish Pradhan</span>
+        <span style="font-size: small"><script> document.write(new Date().toDateString()); </script></span>
+        <span style="font-size: small">Login Time: <span id="logintime"></span></span>
+    </div>
+
+    <div width="1050" height="50">
+          <br/>
+          <span style="padding-left: 75px;">
+                <img src="images/voice.png" alt="HTML5 Icon" style="background-color: transparent;width:40px;height:auto;">
+          </span>
+          <span style="padding-left: 15px;font-weight: bolder;font-size: x-large">Weekly Voice Detection Report</span>
+          <br/><br/>
+    </div>
+    <div >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span style="font-size: small;font-weight: bold;color: dimgray">Select a week:</span>
+          &nbsp;&nbsp;&nbsp;&nbsp
+          <select class = "vdweekSelection"></select>
+          <span style="font-size: xx-small;color: dimgray">
+              (<b>Usage:</b>
+              Default Current week data is displayed along with current day hourly data.
+              Use the dropdown to see previous week data.
+              Also click on the weekly bar chart to see detailed hourly report for the selected day)
+          </span>
+    </div>
+    <div width="1000" height="500" class="container">
+          <svg id="svg_1a" width="550" height="300" style="background-color:#EEECEC"></svg>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <svg id="svg_1b" width="550" height="300" style="background-color:#EEECEC"></svg>
+    </div>
+
+    <div width="1050" height="50">
+          <br/>
+          <span style="padding-left: 75px;">
+                <img src="images/posture.png" alt="HTML5 Icon" style="background-color: transparent;width:40px;height:auto;">
+          </span>
+          <span style="padding-left: 15px;font-weight: bolder;font-size: x-large">Weekly Posture Change Report</span>
+          <br/><br/>
+    </div>
+    <div >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span style="font-size: small;font-weight: bold;color: dimgray">Select a week:</span>
+          &nbsp;&nbsp;&nbsp;&nbsp
+          <select class = "pcweekSelection"></select>
+          <span style="font-size: xx-small;color: dimgray">
+              (<b>Usage:</b>
+              Default Current week data is displayed along with current day hourly data.
+              Use the dropdown to see previous week data.
+              Also click on the weekly bar chart to see detailed hourly report for the selected day)
+          </span>
+    </div>
+    <div width="1000" height="500" class="container">
+          <svg id="svg_2a" width="550" height="300" style="background-color:#EEECEC"></svg>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <svg id="svg_2b" width="550" height="300" style="background-color:#EEECEC"></svg>
+    </div>
+
+    <!--
+    <br/>
+    <br/>
+    <div class="title">
+        <span>Ashish Pradhan</span>
+        <span style="font-size: small"><script> document.write(new Date().toDateString()); </script></span>
+        <span style="font-size: small">Login Time: <span id="logintime"></span></span>
+    </div>
+    -->
+
+    <br/>
+    <br/>
+    <p style="font-size: smaller;padding-left: 20px">
+        This dashboard has been developed using <b>node.js</b> <span id="node-version"></span>,
+        <b>, electron.js</b> <span id="electron-version"></span>
+        <b>, d3.js</b> <span>v4.0.0</span>
+        <span> and</span>
+        <b> Chromium</b> <span id="chrome-version"></span>.
+        <br/>
+        The stats data are being fetch by
+        <b> Python Flask HTTP Api</b><span> from </span>
+        <b>SQLite3 </b> <span>Database running on </span>
+        <b>Raspberry Pi</b><span> Version 4 Model B</span>.
+        <br/>
+        The stats data are being generated by below three modules:<br/>
+        1.  <b>Voice Detection Module </b><span> (Powered by:)</span> running on <b>POST Iot Device </b>(Raspberry Pi)<br/>
+        2.  <b>Face Detection Module </b> <span> (Powered by: TensorFlowLite, OpenCV) </span> running on <b>POST Iot Device </b>(Raspberry Pi)<br/>
+        3.  <b>Posture Detection Module </b><span> (Powered by:)</span> running on <b>POST Iot Device </b>(Raspberry Pi)<br/>
+    </p>
+
+  </body>
+  </html>
+
